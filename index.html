@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <title>مولد كلمات المرور القوية - PowerPass</title>
+    <link rel="stylesheet" href="style_improved.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><span>Power</span>Pass مولد</h1>
+            <p class="subtitle">أنشئ كلمات مرور قوية وآمنة مع قواعد قابلة للتخصيص. اختر تفضيلاتك وأنشئ كلمة مرور تلبي احتياجاتك الأمنية.</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="rules-panel">
+                <h2 class="section-title rules-title">قواعد كلمة المرور</h2>
+                
+                <div class="rule-group">
+                    <label class="rule-label">طول كلمة المرور: <span id="lengthValue">12</span> حرفًا</label>
+                    <div class="slider-container">
+                        <input type="range" min="6" max="32" value="12" class="slider" id="lengthSlider">
+                        <div class="slider-value" id="lengthDisplay">12</div>
+                    </div>
+                </div>
+                
+                <div class="rule-group">
+                    <label class="rule-label">أنواع الأحرف (اختر واحدة على الأقل):</label>
+                    <div class="checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="uppercase" checked>
+                            <span>أحرف كبيرة (A-Z)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="lowercase" checked>
+                            <span>أحرف صغيرة (a-z)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="numbers" checked>
+                            <span>أرقام (0-9)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="symbols">
+                            <span>رموز خاصة (!@#$%^&*)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="similarChars">
+                            <span>استبعاد الأحرف المتشابهة (i, l, 1, o, 0)</span>
+                        </label>
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="ambiguousChars">
+                            <span>استبعاد الأحرف المبهمة ({ } [ ] ( ) / \ ' " ` ~ , ; : . < >)</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="result-panel">
+                <h2 class="section-title result-title">كلمة المرور المنشأة</h2>
+                
+                <div class="password-display" id="passwordDisplay">
+                    انقر على "إنشاء كلمة مرور" لإنشاء كلمة مرور آمنة
+                </div>
+                
+                <div class="password-strength">
+                    <div class="strength-label">القوة:</div>
+                    <div class="strength-meter">
+                        <div class="strength-fill" id="strengthFill"></div>
+                    </div>
+                    <div class="strength-value" id="strengthValue">ضعيفة</div>
+                </div>
+                
+                <div class="action-buttons">
+                    <button class="action-btn copy-btn" id="copyBtn">
+                        <i class="fas fa-copy"></i> نسخ كلمة المرور
+                    </button>
+                    <button class="action-btn reset-btn" id="resetBtn">
+                        <i class="fas fa-redo"></i> إعادة الضبط
+                    </button>
+                </div>
+                
+                <div class="password-history">
+                    <div class="history-title">كلمات المرور المنشأة حديثًا:</div>
+                    <div id="historyList"></div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="button-container">
+            <button class="generate-btn" id="generateBtn">
+                <i class="fas fa-key"></i> إنشاء كلمة مرور آمنة
+            </button>
+        </div>
+        
+        <footer>
+            <p>مولد PowerPass &copy; 2025 | كلمات مرور آمنة لحماية أفضل على الإنترنت</p>
+            <p>استخدم هذه الأداة لإنشاء كلمات مرور قوية وفريدة لجميع حساباتك على الإنترنت.</p>
+        </footer>
+    </div>
+
+    <script src="script_improved.js"></script>
+</body>
+</html>
